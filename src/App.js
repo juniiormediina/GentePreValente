@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar/Navbar.js";
+import Card from "./components/Card/Card.js";
+
 function App() {
   return (
     <div>
-      <h1>Funcionando</h1>
-      <h2>Funcionando</h2>
+      <Navbar />
+      <Card />
     </div>
   );
 }
