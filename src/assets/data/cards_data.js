@@ -1,8 +1,9 @@
-import management from "../../assets/images/industry-solid.svg";
-import indicators from "../../assets/images/chart-bar-solid.svg";
-import employees from "../../assets/images/user-tie-solid.svg";
-import requests from "../../assets/images/users-cog-solid.svg";
-import clock from "../../assets/images/clock-regular.svg";
+/* Icons */
+import management from "../images/management.svg";
+import indicators from "../images/indicators.svg";
+import employees from "../images/employees.svg";
+import requests from "../images/requests.svg";
+import clock from "../images/clock.svg";
 
 const cards = [
   {

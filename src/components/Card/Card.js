@@ -2,6 +2,7 @@ import React from "react";
 
 /* Components */
 import DetailCard from "./DetailCard";
+
 /* data */
 import { cards } from "../../assets/data/cards_data";
 

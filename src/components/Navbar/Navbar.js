@@ -1,5 +1,7 @@
 import React from "react";
 import FontAwesome from "react-fontawesome";
+
+/* Icons */
 import logo from "../../assets/images/Logo.png";
 
 const Navbar = () => {
