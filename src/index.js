@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 
 /* Styles */
-import "./assets/styles/tailwind.css";
+import "./index.css";
+
+import App from "./App";
 
 /* Icons font-awesome */
 import "font-awesome/css/font-awesome.css";
