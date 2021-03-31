@@ -14,7 +14,7 @@ import Approval from "./components/Approval/Approval.js";
 function App() {
   return (
     <Router>
-      <div className="bg-gray-200">
+      <div className="bg-gray-lightest">
         <Navbar />
         <Switch>
           <Route path="/approval" component={Approval} />

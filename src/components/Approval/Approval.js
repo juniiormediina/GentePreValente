@@ -34,7 +34,7 @@ const Approval = () => {
     <div>
       <div className="py-6">
         <p>
-          <Link to="/" className="ml-5 text-blue-400">
+          <Link to="/" className="ml-5 text-blue">
             Administración
           </Link>
           / Aprobación de Empresas
@@ -44,7 +44,7 @@ const Approval = () => {
       <div className="w-full container mx-auto md:w-9/12 shadow-md bg-white rounded-xl">
         <div className="p-5 sm:p-20">
           <div className="flex justify-center sm:justify-end">
-            <div className="sm:mr-16 2xl:mr-72 w-72 h-56 bg-gray-300 flex items-center justify-center">
+            <div className="sm:mr-16 2xl:mr-72 w-72 h-56 bg-gray-light flex items-center justify-center">
               <img src={LogoNegro} alt="" />
             </div>
             {window.screen.width > 640 ? <Buttons /> : null}

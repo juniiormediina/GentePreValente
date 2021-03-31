@@ -8,7 +8,7 @@ const Buttons = () => {
         <FontAwesome
           name="check-circle"
           size="2x"
-          className="mr-2 fill-current text-green-700"
+          className="mr-2 fill-current text-green"
         />
         Aprobar Empresa
       </button>
@@ -16,7 +16,7 @@ const Buttons = () => {
         <FontAwesome
           name="times-circle"
           size="2x"
-          className="mr-2 fill-current text-red-600"
+          className="mr-2 fill-current text-red"
         />
         Rechazar Empresa
       </button>

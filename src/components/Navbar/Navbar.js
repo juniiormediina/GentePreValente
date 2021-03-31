@@ -7,10 +7,11 @@ import logo from "../../assets/images/Logo.png";
 const Navbar = () => {
   const [showmenu, setShowmenu] = useState(false);
   const [showmenumobile, setShowmenumobile] = useState(false);
+  const [showempleos, setShowempleos] = useState(false);
 
   return (
     <div>
-      <nav className="bg-gray-800">
+      <nav className="bg-gray">
         <div className=" mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -35,14 +36,62 @@ const Navbar = () => {
                     <FontAwesome name="cogs" className="mr-2" />
                     Administración
                   </a>
-                  <a
-                    href="!#"
-                    className="sm:ml-16 text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  <div>
+                    <a
+                      href="!#"
+                      className="sm:ml-16 text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      <FontAwesome name="suitcase" className="mr-2" />
+                      Empleo
+                    </a>
+                    <button
+                      type="button"
+                      className="text-gray-200 focus:outline-none"
+                      id="empleos-menu"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      onClick={() =>
+                        showempleos
+                          ? setShowempleos(false)
+                          : setShowempleos(true)
+                      }
+                    >
+                      <FontAwesome name="chevron-down" />
+                    </button>
+                  </div>
+                  <div
+                    showempleos={showempleos}
+                    setShowempleos={setShowempleos}
                   >
-                    <FontAwesome name="suitcase" className="mr-2" />
-                    Empleo
-                    <FontAwesome name="chevron-down" className="ml-1" />
-                  </a>
+                    {showempleos ? (
+                      <div
+                        className="absolute mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 mr-96"
+                        aria-orientation="vertical"
+                        aria-labelledby="empleo-menu"
+                      >
+                        <a
+                          href="!#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Your Profile
+                        </a>
+
+                        <a
+                          href="!#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Settings
+                        </a>
+
+                        <a
+                          href="!#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          Sign out
+                        </a>
+                      </div>
+                    ) : null}
+                  </div>
                   <a
                     href="!#"
                     className="sm:ml-7 space-x-16 text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -67,7 +116,7 @@ const Navbar = () => {
                     </p>
                     <button
                       type="button"
-                      className="text-gray-200 max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                      className="text-gray-200 max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none"
                       id="user-menu"
                       aria-expanded="false"
                       aria-haspopup="true"

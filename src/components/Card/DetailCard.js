@@ -11,7 +11,7 @@ const DetailCard = ({
 }) => {
   return (
     <div className="h-72 rounded-l-3xl rounded-r-3xl overflow-hidden shadow-md bg-white">
-      <div className="absolute rounded-l-2xl rounded-r-2xl w-24 h-24 flex items-center justify-center bg-blue-500 ml-5 -mt-16">
+      <div className="absolute rounded-l-2xl rounded-r-2xl w-24 h-24 flex items-center justify-center bg-blue ml-5 -mt-16">
         <img src={icon} alt={iconName} className="w-14 h-12" />
       </div>
       <div className="px-6 mb-8 mt-16">
