@@ -1,16 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+/* Icons */
+import LogoNegro from "../../assets/images/Logo_Negro.png";
+
+/* Documents */
+import { documents } from "../../assets/data/documents_data";
 
 /* Components */
 import Road from "../Road/Road";
 import Buttons from "../Buttons/Buttons";
 import Modal from "../Modal/Modal";
 
-/* Icons */
-import LogoNegro from "../../assets/images/Logo_Negro.png";
-
 const Approval = () => {
   const [showModal, setShowModal] = useState(false);
+  const [companyName, setCompanyName] = useState("");
+  const [busionessName, setBusionessName] = useState("");
+  const [identificationType, setIdentificationType] = useState("");
+  const [idNumber, setIdNumber] = useState("");
+  const [employeesNumber, setEmployeesNumber] = useState("");
+
+  useEffect(() => {
+    documents.forEach((elmen) => {
+      setCompanyName(elmen.companyName);
+      setBusionessName(elmen.busionessName);
+      setIdentificationType(elmen.identificationType);
+      setIdNumber(elmen.idNumber);
+      setEmployeesNumber(elmen.employeesNumber);
+    });
+  }, []);
 
   return (
     <div>
@@ -38,7 +56,8 @@ const Approval = () => {
                   <span>Nombre de la empresa</span>
                   <input
                     type="text"
-                    className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
+                    className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black font-bold text-base"
+                    value={companyName}
                   />
                 </label>
               </div>
@@ -46,7 +65,8 @@ const Approval = () => {
                 <label htmlFor="">Razón Social</label>
                 <input
                   type="text"
-                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
+                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black font-bold text-base"
+                  value={busionessName}
                 />
               </div>
             </div>
@@ -55,14 +75,16 @@ const Approval = () => {
                 <label htmlFor="">Tipo de identificación</label>
                 <input
                   type="text"
-                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
+                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black font-bold text-base"
+                  value={identificationType}
                 />
               </div>
               <div className="sm:w-1/2 sm:px-8 py-6">
                 <label htmlFor="">Identificación</label>
                 <input
                   type="text"
-                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
+                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black font-bold text-base"
+                  value={idNumber}
                 />
               </div>
             </div>
@@ -71,7 +93,8 @@ const Approval = () => {
                 <label htmlFor=""># de empleados</label>
                 <input
                   type="text"
-                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
+                  className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black font-bold text-base"
+                  value={employeesNumber}
                 />
               </div>
               <Modal showModal={showModal} setShowModal={setShowModal}></Modal>

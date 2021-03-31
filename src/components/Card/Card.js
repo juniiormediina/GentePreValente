@@ -9,7 +9,7 @@ import { cards } from "../../assets/data/cards_data";
 const Card = () => {
   return (
     <div className="container mx-auto mt-12">
-      <div className="my-6 flex flex-wrap  rounded-2xl">
+      <div className=" flex flex-wrap  rounded-2xl">
         {cards.map((cards, i) => (
           <div
             key={i}

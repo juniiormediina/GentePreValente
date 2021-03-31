@@ -10,29 +10,38 @@ import OTRO from "../documents/Otro_Documento_Prevalentwaree.pdf";
 
 const documents = [
   {
-    file: RUT,
-    name: "RUT PrevalentWare",
-    icon: PDF,
-  },
-  {
-    file: LOGO,
-    name: "Logo PrevlalentWare",
-    icon: PDF,
-  },
-  {
-    file: ACTA,
-    name: "Acta de constitución PrevlalentWare",
-    icon: PDF,
-  },
-  {
-    file: CAMARA,
-    name: "Cámara de Comercio Prevalentware",
-    icon: PDF,
-  },
-  {
-    file: OTRO,
-    name: "Otro Documento Prevalentwaree",
-    icon: PDF,
+    companyName: "PREVALENTWARE",
+    busionessName: "PREVALENTWARE S.A.S",
+    identificationType: "NIT",
+    idNumber: "901375150-4",
+    employeesNumber: "1 - 10",
+    attachments: [
+      {
+        file: RUT,
+        name: "RUT PrevalentWare",
+        icon: PDF,
+      },
+      {
+        file: LOGO,
+        name: "Logo PrevlalentWare",
+        icon: PDF,
+      },
+      {
+        file: ACTA,
+        name: "Acta de constitución PrevlalentWare",
+        icon: PDF,
+      },
+      {
+        file: CAMARA,
+        name: "Cámara de Comercio Prevalentware",
+        icon: PDF,
+      },
+      {
+        file: OTRO,
+        name: "Otro Documento Prevalentwaree",
+        icon: PDF,
+      },
+    ],
   },
 ];
 
